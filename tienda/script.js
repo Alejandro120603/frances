@@ -5,25 +5,25 @@ const baseDeDatos = {
     mujer: {
         titulo: 'MUJER',
         productos: [
-            { id: 1, nombre: 'Vestido de Lino', precio: '$49.99', img: 'si.webp', desc: 'Vestido confeccionado en tejido 100% lino. Cuello redondo y manga corta. Detalle de abertura en espalda.' },
-            { id: 2, nombre: 'Camisa Básica', precio: '$29.99', img: 'si.webp', desc: 'Camisa básica de corte recto, 100% algodón. Cuello clásico y manga larga con puño abotonado.' },
-            { id: 3, nombre: 'Jeans Slim Fit', precio: '$59.99', img: 'si.webp', desc: 'Pantalón vaquero de 5 bolsillos. Corte slim fit. Cierre de cremallera y botón.' },
-            { id: 4, nombre: 'Abrigo de Lana', precio: '$129.99', img: 'si.webp', desc: 'Abrigo de mezcla de lana con cuello solapa. Bolsillos delanteros y cierre de botones.' }
+            { id: 1, nombre: 'Robe noire', precio: '$49.99', img: 'images/vestido_negro_mujer.png', desc: 'Vestido confeccionado en tejido 100% lino. Cuello redondo y manga corta. Detalle de abertura en espalda.' },
+            { id: 2, nombre: 'Chemise blanche', precio: '$29.99', img: 'images/camisa_blanca_mujer.png', desc: 'Camisa básica de corte recto, 100% algodón. Cuello clásico y manga larga con puño abotonado.' },
+            { id: 3, nombre: 'Jean bleu', precio: '$59.99', img: 'images/jeans_azules_mujer.png', desc: 'Pantalón vaquero de 5 bolsillos. Corte slim fit. Cierre de cremallera y botón.' },
+            { id: 4, nombre: 'Manteau pour femme', precio: '$129.99', img: 'images/abrigo_mujer.png', desc: 'Abrigo de mezcla de lana con cuello solapa. Bolsillos delanteros y cierre de botones.' }
         ]
     },
     hombre: {
         titulo: 'HOMBRE',
         productos: [
-            { id: 5, nombre: 'Camisa Oxford', precio: '$45.00', img: 'si.webp', desc: 'Camisa de corte regular fit en tejido Oxford de algodón. Cuello con botones y manga larga.' },
-            { id: 6, nombre: 'Pantalón Chino', precio: '$55.00', img: 'si.webp', desc: 'Pantalón tipo chino de corte slim. Tejido elástico para mayor comodidad. Bolsillos laterales.' },
-            { id: 7, nombre: 'Sudadera con Capucha', precio: '$65.00', img: 'si.webp', desc: 'Sudadera con capucha y bolsillo canguro. Interior perchado suave. 100% algodón.' },
+            { id: 5, nombre: 'Chemise rose', precio: '$45.00', img: 'images/camisa-rosa-hombre.png', desc: 'Camisa de corte regular fit en tejido Oxford de algodón. Cuello con botones y manga larga.' },
+            { id: 6, nombre: 'Pantalon marron', precio: '$55.00', img: 'images/pantalon-marron-hombre.png', desc: 'Pantalón tipo chino de corte slim. Tejido elástico para mayor comodidad. Bolsillos laterales.' },
+            { id: 7, nombre: 'Sweat gris', precio: '$65.00', img: 'images/sudadera-gris-hombre.png', desc: 'Sudadera con capucha y bolsillo canguro. Interior perchado suave. 100% algodón.' },
         ]
     },
     ninos: {
         titulo: 'NIÑOS',
         productos: [
-            { id: 8, nombre: 'Conjunto de Algodón', precio: '$25.99', img: 'si.webp', desc: 'Conjunto de camiseta y pantalón corto en punto de algodón suave. Estampado divertido.' },
-            { id: 9, nombre: 'Chaqueta Acolchada', precio: '$39.99', img: 'si.webp', desc: 'Chaqueta acolchada ligera con capucha. Cierre de cremallera y bolsillos laterales.' }
+            { id: 8, nombre: 'Pantalon enfant', precio: '$25.99', img: 'images/pants-niño.png', desc: 'Conjunto de camiseta y pantalón corto en punto de algodón suave. Estampado divertido.' },
+            { id: 9, nombre: 'Veste enfant', precio: '$39.99', img: 'images/chaqueta-niño.png', desc: 'Chaqueta acolchada ligera con capucha. Cierre de cremallera y bolsillos laterales.' }
         ]
     }
 };
