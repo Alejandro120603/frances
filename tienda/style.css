@@ -52,6 +52,49 @@ img {
     display: block;
 }
 
+.content-box {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+}
+
+.philosophy-box h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.philo-section {
+    margin-top: 30px;
+}
+
+.philo-section h2 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.philo-section p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.values-list {
+    padding-left: 20px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+}
+
 /* --- 1. Encabezado y Navegación --- */
 .main-header {
     display: flex;
@@ -75,6 +118,12 @@ img {
     letter-spacing: 1.8px;
 }
 
+.logo img {
+    height: 44px;
+    width: auto;
+    display: block;
+}
+
 .main-nav ul {
     display: flex;
     gap: 20px;
@@ -92,6 +141,12 @@ img {
     border-radius: 999px;
     border: 1px solid transparent;
     font-size: 0.85rem;
+}
+
+.main-nav a.active {
+    border-color: var(--border);
+    background-color: rgba(17, 17, 17, 0.06);
+    font-weight: 700;
 }
 
 .main-nav a:hover,
