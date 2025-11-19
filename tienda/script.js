@@ -3,27 +3,27 @@
 // --- 1. NUESTRA BASE DE DATOS DE PRODUCTOS ---
 const baseDeDatos = {
     mujer: {
-        titulo: 'MUJER',
+        titulo: 'FEMME',
         productos: [
-            { id: 1, nombre: 'Robe noire', precio: '$49.99', img: 'images/vestido_negro_mujer.png', desc: 'Vestido confeccionado en tejido 100% lino. Cuello redondo y manga corta. Detalle de abertura en espalda.' },
-            { id: 2, nombre: 'Chemise blanche', precio: '$29.99', img: 'images/camisa_blanca_mujer.png', desc: 'Camisa básica de corte recto, 100% algodón. Cuello clásico y manga larga con puño abotonado.' },
-            { id: 3, nombre: 'Jean bleu', precio: '$59.99', img: 'images/jeans_azules_mujer.png', desc: 'Pantalón vaquero de 5 bolsillos. Corte slim fit. Cierre de cremallera y botón.' },
-            { id: 4, nombre: 'Manteau pour femme', precio: '$129.99', img: 'images/abrigo_mujer.png', desc: 'Abrigo de mezcla de lana con cuello solapa. Bolsillos delanteros y cierre de botones.' }
+            { id: 1, nombre: 'Robe noire', precio: '$49.99', img: 'images/vestido_negro_mujer.png', desc: 'Robe confectionnée en tissu 100 % lin. Col rond, manches courtes et découpe dans le dos.' },
+            { id: 2, nombre: 'Chemise blanche', precio: '$29.99', img: 'images/camisa_blanca_mujer.png', desc: 'Chemise basique coupe droite, 100 % coton. Col classique et manches longues avec poignets boutonnés.' },
+            { id: 3, nombre: 'Jean bleu', precio: '$59.99', img: 'images/jeans_azules_mujer.png', desc: 'Jean cinq poches coupe slim fit. Fermeture éclair et bouton.' },
+            { id: 4, nombre: 'Manteau pour femme', precio: '$129.99', img: 'images/abrigo_mujer.png', desc: 'Manteau en mélange de laine avec col à revers. Poches avant et fermeture à boutons.' }
         ]
     },
     hombre: {
-        titulo: 'HOMBRE',
+        titulo: 'HOMME',
         productos: [
-            { id: 5, nombre: 'Chemise rose', precio: '$45.00', img: 'images/camisa-rosa-hombre.png', desc: 'Camisa de corte regular fit en tejido Oxford de algodón. Cuello con botones y manga larga.' },
-            { id: 6, nombre: 'Pantalon marron', precio: '$55.00', img: 'images/pantalon-marron-hombre.png', desc: 'Pantalón tipo chino de corte slim. Tejido elástico para mayor comodidad. Bolsillos laterales.' },
-            { id: 7, nombre: 'Sweat gris', precio: '$65.00', img: 'images/sudadera-gris-hombre.png', desc: 'Sudadera con capucha y bolsillo canguro. Interior perchado suave. 100% algodón.' },
+            { id: 5, nombre: 'Chemise rose', precio: '$45.00', img: 'images/camisa-rosa-hombre.png', desc: 'Chemise coupe regular fit en tissu Oxford de coton. Col boutonné et manches longues.' },
+            { id: 6, nombre: 'Pantalon marron', precio: '$55.00', img: 'images/pantalon-marron-hombre.png', desc: 'Pantalon chino coupe slim. Tissu stretch pour plus de confort. Poches latérales.' },
+            { id: 7, nombre: 'Sweat gris', precio: '$65.00', img: 'images/sudadera-gris-hombre.png', desc: 'Sweat à capuche avec poche kangourou. Intérieur doux gratté. 100 % coton.' },
         ]
     },
     ninos: {
-        titulo: 'NIÑOS',
+        titulo: 'ENFANTS',
         productos: [
-            { id: 8, nombre: 'Pantalon enfant', precio: '$25.99', img: 'images/pants-niño.png', desc: 'Conjunto de camiseta y pantalón corto en punto de algodón suave. Estampado divertido.' },
-            { id: 9, nombre: 'Veste enfant', precio: '$39.99', img: 'images/chaqueta-niño.png', desc: 'Chaqueta acolchada ligera con capucha. Cierre de cremallera y bolsillos laterales.' }
+            { id: 8, nombre: 'Pantalon enfant', precio: '$25.99', img: 'images/pants-niño.png', desc: 'Ensemble t-shirt et short en jersey de coton doux. Imprimé ludique.' },
+            { id: 9, nombre: 'Veste enfant', precio: '$39.99', img: 'images/chaqueta-niño.png', desc: 'Veste matelassée légère avec capuche. Fermeture éclair et poches latérales.' }
         ]
     }
 };
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const enlaceCesta = document.querySelector('.nav-icons a[href="cesta.html"]');
         if (enlaceCesta) {
-            enlaceCesta.textContent = `CESTA (${totalItems})`;
+            enlaceCesta.textContent = `PANIER (${totalItems})`;
         }
     }
     
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // 3. Actualizar el título
         contenedorTitulo.textContent = datos.titulo;
-        document.title = `${datos.titulo} - Mi Marca`; // Actualiza el título de la pestaña
+        document.title = `${datos.titulo} - Ma Marque`; // Actualiza el título de la pestaña
 
         // 4. Generar el HTML para la cuadrícula
         let gridHTML = ''; 
@@ -126,12 +126,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (producto) {
             // 3. Si el producto existe, generar el HTML
-            document.title = `${producto.nombre} - Mi Marca`; // Actualizar título de la pestaña
+            document.title = `${producto.nombre} - Ma Marque`; // Actualizar título de la pestaña
 
             const productoHTML = `
                 <section class="product-images">
-                    <img src="${producto.img}" alt="Vista frontal de ${producto.nombre}">
-                    <img src="${producto.img.replace('?text=', '?text=Detalle+')}" alt="Detalle de ${producto.nombre}">
+                    <img src="${producto.img}" alt="Vue de face de ${producto.nombre}">
+                    <img src="${producto.img.replace('?text=', '?text=Detail+')}" alt="Détail de ${producto.nombre}">
                 </section>
 
                 <aside class="product-info">
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         </p>
 
                         <div class="size-selector">
-                            <span class="selector-title">TALLA:</span>
+                            <span class="selector-title">TAILLE :</span>
                             <div class="sizes">
                                 <button class="size-option">XS</button>
                                 <button class="size-option">S</button>
@@ -154,12 +154,12 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>
                         </div>
 
-                        <button class="btn-add-to-cart" data-id="${producto.id}">AÑADIR A LA CESTA</button>
+                            <button class="btn-add-to-cart" data-id="${producto.id}">AJOUTER AU PANIER</button>
 
                         <div class="product-extra-info">
-                            <a href="#">Composición y Cuidado</a>
-                            <a href="#">Guía de Tallas</a>
-                            <a href="#">Envío y Devoluciones</a>
+                            <a href="#">Composition et entretien</a>
+                            <a href="#">Guide des tailles</a>
+                            <a href="#">Livraison et retours</a>
                         </div>
                     </div>
                 </aside>
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 const tallaSeleccionada = document.querySelector('.size-option.selected');
                 if (!tallaSeleccionada) {
-                    alert('Por favor, selecciona una talla.');
+                    alert('Veuillez sélectionner une taille.');
                     return; 
                 }
                 const talla = tallaSeleccionada.textContent;
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 if (itemExistente) {
                     itemExistente.cantidad += 1;
-                    alert('Cantidad actualizada en la cesta.');
+                    alert('La quantité a été mise à jour dans le panier.');
                 } else {
                     // Creamos el objeto nuevo con cantidad 1
                     const productoParaCesta = {
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         cantidad: 1 
                     };
                     cesta.push(productoParaCesta);
-                    alert('¡Producto añadido a la cesta!');
+                    alert('Produit ajouté au panier !');
                 }
 
                 localStorage.setItem('miTiendaCesta', JSON.stringify(cesta));
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         } else {
             // 3b. Si el producto NO existe
-            contenedorProducto.innerHTML = '<h1>Producto no encontrado</h1><p>El producto que buscas no existe. <a href="index.html">Volver al inicio</a>.</p>';
+            contenedorProducto.innerHTML = '<h1>Produit introuvable</h1><p>Le produit que vous recherchez n’existe pas. <a href="index.html">Retour à l’accueil</a>.</p>';
         }
     }
 
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
             contenedorItemsCesta.innerHTML = ''; 
             
             if (cesta.length === 0) {
-                contenedorItemsCesta.innerHTML = '<p>Tu cesta está vacía.</p>';
+                contenedorItemsCesta.innerHTML = '<p>Votre panier est vide.</p>';
             } else {
                 cesta.forEach(item => {
                     const itemHTML = `
@@ -256,16 +256,16 @@ document.addEventListener("DOMContentLoaded", function() {
                             <div class="cart-item-details">
                                 <h2>${item.nombre}</h2>
                                 <p class="item-price">${item.precio}</p>
-                                <p class="item-info">Talla: ${item.talla}</p>
+                                <p class="item-info">Taille : ${item.talla}</p>
                                 <div class="item-quantity">
-                                    <label for="qty-${item.id}">Cantidad:</label>
+                                    <label for="qty-${item.id}">Quantité :</label>
                                     <select class="item-quantity-select" data-id="${item.id}" data-talla="${item.talla}">
                                         ${generarOpcionesCantidad(item.cantidad)}
                                     </select>
                                 </div>
                             </div>
                             <div class="cart-item-remove">
-                                <button class="btn-eliminar-item" data-id="${item.id}" data-talla="${item.talla}">ELIMINAR</button>
+                                <button class="btn-eliminar-item" data-id="${item.id}" data-talla="${item.talla}">SUPPRIMER</button>
                             </div>
                         </div>
                     `;
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 subtotal += precio * item.cantidad; 
             });
 
-            const envio = (subtotal > 0) ? 3.95 : 0; // Envío gratis si la cesta está vacía
+            const envio = (subtotal > 0) ? 3.95 : 0; // Livraison gratuite si le panier est vide
             const total = subtotal + envio;
             
             document.getElementById('summary-subtotal').textContent = `$${subtotal.toFixed(2)}`;
@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Redirigir si la cesta está vacía
             if (cesta.length === 0) {
-                alert("Tu cesta está vacía. Serás redirigido al inicio.");
+                alert('Votre panier est vide. Vous allez être redirigé vers l’accueil.');
                 window.location.href = 'index.html';
             }
         }
@@ -383,11 +383,11 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             
             if (esValido) {
-                alert('¡Pedido realizado con éxito!');
+                alert('Commande passée avec succès !');
                 localStorage.removeItem('miTiendaCesta');
                 window.location.href = 'index.html';
             } else {
-                alert('Por favor, completa todos los campos marcados en rojo.');
+                alert('Veuillez remplir tous les champs indiqués en rouge.');
             }
         });
         
