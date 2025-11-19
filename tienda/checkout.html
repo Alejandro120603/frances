@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Pago - Mi Marca</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">MI MARCA</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="categoria.html?cat=mujer">MUJER</a></li>
+                <li><a href="categoria.html?cat=hombre">HOMBRE</a></li>
+                <li><a href="categoria.html?cat=ninos">NIÑOS</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="#">BUSCAR</a>
+            <a href="#">LOGIN</a>
+            <a href="cesta.html">CESTA (0)</a> 
+        </div>
+    </header>
+
+    <main class="checkout-container">
+        <h1>PROCESO DE PAGO</h1>
+        
+        <div class="cart-layout">
+
+            <section class="checkout-forms">
+                <form id="payment-form">
+                    
+                    <h2>1. DIRECCIÓN DE ENVÍO</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fname">Nombre</label>
+                            <input type="text" id="fname" name="fname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Apellidos</label>
+                            <input type="text" id="lname" name="lname" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Dirección</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">Ciudad</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Código Postal</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">País</label>
+                        <select id="country" name="country">
+                            <option value="es">España</option>
+                            <option value="mx">México</option>
+                            <option value="ar">Argentina</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <h2 class="form-title-spacer">2. PAGO</h2>
+                    <div class="form-group">
+                        <label for="card-name">Nombre en la tarjeta</label>
+                        <input type="text" id="card-name" name="card-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Número de tarjeta</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="card-expiry">Caducidad (MM/AA)</label>
+                            <input type="text" id="card-expiry" name="card-expiry" placeholder="MM / AA" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cvc">CVC</label>
+                            <input type="text" id="card-cvc" name="card-cvc" placeholder="123" required>
+                        </div>
+                    </div>
+
+                </form>
+            </section>
+
+            <aside class="order-summary">
+                <h2>RESUMEN DEL PEDIDO</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío (Estándar)</span>
+                    <span id="summary-envio">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="summary-total">$0.00</span>
+                </div>
+                
+                <button type="submit" form="payment-form" class="btn-checkout">PAGAR AHORA</button>
+
+                <div class="summary-info">
+                    <p>Al hacer clic en "Pagar ahora", aceptas nuestros <a href="#">Términos y Condiciones</a> y <a href="#">Política de Privacidad</a>.</p>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <ul>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Redes Sociales</a></li>
+        </ul>
+        <span>© 2025 MI MARCA</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

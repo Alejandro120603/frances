@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesta de Compra - Mi Marca</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">MI MARCA</a>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="categoria.html?cat=mujer">MUJER</a></li>
+                <li><a href="categoria.html?cat=hombre">HOMBRE</a></li>
+                <li><a href="categoria.html?cat=ninos">NIÑOS</a></li>
+                <li><a href="#">NOVEDADES</a></li>
+            </ul>
+        </nav>
+        
+        <div class="nav-icons">
+            <a href="#">BUSCAR</a>
+            <a href="#">LOGIN</a>
+            <a href="cesta.html">CESTA (0)</a> 
+        </div>
+    </header>
+
+    <main class="cart-container">
+        <h1>CESTA DE LA COMPRA</h1>
+        
+        <div class="cart-layout">
+
+            <section class="cart-items">
+                <p>Cargando tu cesta...</p>
+            </section>
+
+            <aside class="order-summary">
+                <h2>RESUMEN DEL PEDIDO</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío (Estándar)</span>
+                    <span id="summary-envio">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="summary-total">$0.00</span>
+                </div>
+                
+                <a href="checkout.html" class="btn-checkout">TRAMITAR PEDIDO</a>
+
+                <div class="promo-code">
+                    <label for="promo">Código promocional</label>
+                    <input type="text" id="promo" placeholder="Introduce tu código">
+                    <button>APLICAR</button>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+
+    <footer class="main-footer">
+        <ul>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Redes Sociales</a></li>
+        </ul>
+        <span>© 2025 MI MARCA</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
